@@ -15,10 +15,10 @@ var express     = require("express"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
-console.log(process.env.DATABASEURL)
+console.log(process.env.DATABASE_URL)
 // mongoose.connect("mongodb+srv://jordanlfc1989:Salah3848!@cluster0-lzsn2.mongodb.net/yelp_camp?retryWrites=true");
 // mongoose.connect('mongodb://localhost:27017/yelp_camp_v11', {useNewUrlParser: true});
-mongoose.connect(process.env.DATABASEURL)
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
 
 
 app.use(bodyParser.urlencoded({extended: true}));
