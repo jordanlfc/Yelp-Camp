@@ -55,13 +55,12 @@ router.put('/:comments_id',middleware.checkCommentOwnership,(req,res) => {
 
 
 
-router.delete("/:comment_id", middleware.checkCommentOwnership, function(req, res){
+router.delete("/:comment_id",function(req, res){
     //findByIdAndRemove
     Comment.findByIdAndRemove(req.params.comment_id, function(err){
        if(err){
            res.redirect("back");
        } else {
-           req.flash("success", "Comment deleted");
            res.redirect("/campgrounds/" + req.params.id);
        }
     });
