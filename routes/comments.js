@@ -55,18 +55,6 @@ router.delete('/:comments_id',middleware.checkCommentOwnership, (req,res) => {
 
 
 
-// router.delete("/:comment_id",middleware.checkCommentOwnership,function(req, res){
-//     //findByIdAndRemove
-//     Comment.findOneAndDelete(req.params.comment_id, function(err){
-//       if(err){
-//           res.redirect("back");
-//       } else {
-//           res.redirect("/campgrounds/" + req.params.id);
-//       }
-//     });
-// });
-
-
 
 
 
